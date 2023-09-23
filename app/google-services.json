@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "256336315493",
+    "firebase_url": "https://articlesapp-bc7c5-default-rtdb.firebaseio.com",
+    "project_id": "articlesapp-bc7c5",
+    "storage_bucket": "articlesapp-bc7c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256336315493:android:78b86424dc53785e18f28c",
+        "android_client_info": {
+          "package_name": "com.frhatieh.articlesapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXP0vRTIZ5huEx_FQpD8AgH-BEfQlnQfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

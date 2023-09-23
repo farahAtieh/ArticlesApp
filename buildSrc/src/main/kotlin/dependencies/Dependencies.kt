@@ -81,4 +81,6 @@ object Dependencies {
     const val roomCompilerKapt = "androidx.room:room-compiler:${DependencyVersions.room_version}"
     const val roomKtx = "androidx.room:room-ktx:${DependencyVersions.room_version}"
 
+    const val firebaseAuthKtx = "com.google.firebase:firebase-auth-ktx:${DependencyVersions.firebase_auth_ktx}"
+    const val firebaseDatabase = "com.google.firebase:firebase-database-ktx:${DependencyVersions.firebase_database}"
 }

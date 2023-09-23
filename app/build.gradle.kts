@@ -9,6 +9,7 @@ import extensions.testImplementation
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
     kotlin("kapt")
     id("com.google.dagger.hilt.android")
     id("kotlin-parcelize")
@@ -97,4 +98,8 @@ dependencies {
     annotationProcessor(Dependencies.roomCompiler)
     kapt(Dependencies.roomCompilerKapt)
     implementation(Dependencies.roomKtx)
+    implementation(Dependencies.firebaseAuthKtx)
+    implementation(Dependencies.firebaseDatabase)
+    implementation ("com.airbnb.android:lottie-compose:5.2.0")
+    implementation ("androidx.navigation:navigation-compose:2.5.0")
 }
