@@ -1,4 +1,4 @@
-package com.frhatieh.articlesapp.ui.theme
+package com.frhatieh.articlesapp.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

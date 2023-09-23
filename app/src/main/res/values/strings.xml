@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ArticlesApp</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="national_id">National ID</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="password">Password</string>
 </resources>

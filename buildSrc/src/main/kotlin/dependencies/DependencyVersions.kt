@@ -28,4 +28,6 @@ object DependencyVersions {
     const val accompanistCoil_version = "0.13.0"
     const val splashScreen_version = "1.0.1"
     const val room_version = "2.5.2"
+    const val firebase_auth_ktx = "22.1.2"
+    const val firebase_database = "20.2.2"
 }
