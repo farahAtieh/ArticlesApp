@@ -9,4 +9,6 @@
     <string name="phone_number">رقم الهاتف</string>
     <string name="date_of_birth">تاريخ الميلاد</string>
     <string name="password">الرقم السري</string>
+    <string name="articles">مقالات</string>
+    <string name="sort">ترتيب</string>
 </resources>

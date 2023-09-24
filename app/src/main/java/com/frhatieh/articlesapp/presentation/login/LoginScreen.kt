@@ -30,8 +30,8 @@ import androidx.navigation.NavController
 import com.frhatieh.articlesapp.R
 import com.frhatieh.articlesapp.ScreenRoutes
 import com.frhatieh.articlesapp.presentation.component.CredentialTextField
+import com.frhatieh.articlesapp.presentation.component.TopBar
 import com.frhatieh.articlesapp.presentation.home.RegistrationPages
-import com.frhatieh.articlesapp.presentation.home.TopBar
 import com.frhatieh.articlesapp.util.extensions.showShortToast
 
 @Composable
@@ -118,7 +118,7 @@ fun LoginScreen(navController: NavController,
 
         if(state.navigateToHome){
             LaunchedEffect(Unit) {
-                navController.navigate(ScreenRoutes.Dashboard.route)
+                navController.navigate(ScreenRoutes.Home.route)
             }
         }
     }

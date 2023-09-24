@@ -83,4 +83,6 @@ object Dependencies {
 
     const val firebaseAuthKtx = "com.google.firebase:firebase-auth-ktx:${DependencyVersions.firebase_auth_ktx}"
     const val firebaseDatabase = "com.google.firebase:firebase-database-ktx:${DependencyVersions.firebase_database}"
+    const val material = "androidx.compose.material:material:${DependencyVersions.material_version}"
+
 }
