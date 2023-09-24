@@ -7,7 +7,9 @@ import androidx.navigation.compose.composable
 import com.frhatieh.articlesapp.ScreenRoutes
 import com.frhatieh.articlesapp.presentation.splash.SplashScreen
 import com.frhatieh.articlesapp.presentation.dashboard.DashboardScreen
+import com.frhatieh.articlesapp.presentation.home.HomeScreen
 import com.frhatieh.articlesapp.presentation.login.LoginScreen
+import com.frhatieh.articlesapp.presentation.profile.ProfileScreen
 import com.frhatieh.articlesapp.presentation.register.RegisterScreen
 
 @Composable
@@ -26,9 +28,10 @@ fun SetupNavGraph(navController: NavHostController) {
         composable(route = ScreenRoutes.Register.route) {
             RegisterScreen(navController)
         }
-
-        composable(route = ScreenRoutes.Dashboard.route) {
-            DashboardScreen()
+        composable(route = ScreenRoutes.Home.route) {
+            HomeScreen()
         }
+
+
     }
 }

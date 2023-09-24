@@ -24,7 +24,7 @@ fun SplashScreen(navController: NavHostController,
     ) {
         LaunchedEffect(Unit) {
             if (isAuthenticated) {
-                navController.navigate(ScreenRoutes.Dashboard.route)
+                navController.navigate(ScreenRoutes.Home.route)
             } else {
                 navController.navigate(ScreenRoutes.Login.route)
             }

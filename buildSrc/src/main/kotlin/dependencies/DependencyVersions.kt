@@ -30,4 +30,5 @@ object DependencyVersions {
     const val room_version = "2.5.2"
     const val firebase_auth_ktx = "22.1.2"
     const val firebase_database = "20.2.2"
+    const val material_version = "1.4.2"
 }
