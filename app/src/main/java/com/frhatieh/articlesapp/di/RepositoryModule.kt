@@ -1,6 +1,10 @@
 package com.frhatieh.articlesapp.di
 
+import com.frhatieh.articlesapp.data.datasource.LocalDataSource
+import com.frhatieh.articlesapp.data.datasource.RemoteDataSource
+import com.frhatieh.articlesapp.data.repository.ArticlesRepositoryImpl
 import com.frhatieh.articlesapp.data.repository.AuthRepositoryImpl
+import com.frhatieh.articlesapp.domain.repository.ArticlesRepository
 import com.frhatieh.articlesapp.domain.repository.AuthRepository
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.FirebaseDatabase
@@ -19,4 +23,8 @@ class RepositoryModule {
         AuthRepositoryImpl(
             auth = Firebase.auth,
             dbUsers = FirebaseDatabase.getInstance().getReference("users"))
+
+    @Provides
+    fun provideArticlesRepository(localDataSource: LocalDataSource, remoteDataSource: RemoteDataSource): ArticlesRepository =
+        ArticlesRepositoryImpl(localDataSource, remoteDataSource)
 }

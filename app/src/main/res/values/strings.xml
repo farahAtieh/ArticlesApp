@@ -10,4 +10,16 @@
     <string name="password">Password</string>
     <string name="articles">Articles</string>
     <string name="sort">Sort</string>
+    <string name="network_error">Please check your network!</string>
+    <string name="error_fetching_new_articles">Error fetching new articles</string>
+    <string name="search">Search</string>
+    <string name="week">week</string>
+    <string name="weeks">weeks</string>
+    <string name="day">day</string>
+    <string name="days">days</string>
+    <string name="today">Today</string>
+    <string name="ago">ago</string>
+    <string name="and_seperater"> and </string>
+    <string name="dashboard">Dashboard</string>
+    <string name="more">More</string>
 </resources>

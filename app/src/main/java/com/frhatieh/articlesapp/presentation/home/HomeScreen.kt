@@ -8,8 +8,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.frhatieh.articlesapp.ScreenRoutes
+import com.frhatieh.articlesapp.presentation.component.BottomNavigation
 import com.frhatieh.articlesapp.presentation.dashboard.DashboardScreen
-import com.frhatieh.articlesapp.presentation.profile.ProfileScreen
+import com.frhatieh.articlesapp.presentation.more.MoreScreen
 
 @Composable
 fun HomeScreen() {
@@ -17,7 +18,7 @@ fun HomeScreen() {
     val navController = rememberNavController()
 
     Scaffold(bottomBar = {
-        com.frhatieh.articlesapp.presentation.component.BottomNavigation(navController = navController)
+        BottomNavigation(navController = navController)
     }) { paddingValue ->
         NavHost(
             modifier = Modifier.padding(paddingValue),
@@ -29,7 +30,7 @@ fun HomeScreen() {
             }
 
             composable(route = ScreenRoutes.Profile.route) {
-                ProfileScreen()
+                MoreScreen()
             }
         }
     }

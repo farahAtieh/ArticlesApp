@@ -6,17 +6,15 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.frhatieh.articlesapp.ScreenRoutes
 import com.frhatieh.articlesapp.presentation.splash.SplashScreen
-import com.frhatieh.articlesapp.presentation.dashboard.DashboardScreen
 import com.frhatieh.articlesapp.presentation.home.HomeScreen
 import com.frhatieh.articlesapp.presentation.login.LoginScreen
-import com.frhatieh.articlesapp.presentation.profile.ProfileScreen
 import com.frhatieh.articlesapp.presentation.register.RegisterScreen
 
 @Composable
 fun SetupNavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = ScreenRoutes.Splash.route
+        startDestination = ScreenRoutes.Home.route
     ) {
         composable(route = ScreenRoutes.Splash.route) {
             SplashScreen(navController)

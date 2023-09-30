@@ -10,14 +10,16 @@ import androidx.compose.material.icons.filled.Menu
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import androidx.navigation.compose.currentBackStackEntryAsState
+import com.frhatieh.articlesapp.R
 
 @Composable
 fun BottomNavigation(navController: NavController) {
     val items = listOf(
-        BottomNavItem("Dashboard", Icons.Default.Menu, ScreenRoutes.Dashboard.route),
-        BottomNavItem("Profile", Icons.Default.Person, ScreenRoutes.Profile.route)
+        BottomNavItem(stringResource(id = R.string.dashboard), Icons.Default.Menu, ScreenRoutes.Dashboard.route),
+        BottomNavItem(stringResource(id = R.string.more), Icons.Default.Person, ScreenRoutes.Profile.route)
     )
 
     BottomNavigation(

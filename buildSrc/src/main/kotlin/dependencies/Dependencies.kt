@@ -84,5 +84,6 @@ object Dependencies {
     const val firebaseAuthKtx = "com.google.firebase:firebase-auth-ktx:${DependencyVersions.firebase_auth_ktx}"
     const val firebaseDatabase = "com.google.firebase:firebase-database-ktx:${DependencyVersions.firebase_database}"
     const val material = "androidx.compose.material:material:${DependencyVersions.material_version}"
-
+    val accompanistVersion = "0.13.0"
+    const val swipeRefresh = "com.google.accompanist:accompanist-swiperefresh:${DependencyVersions.accompanistCoil_version}"
 }

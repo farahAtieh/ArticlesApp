@@ -1,3 +1,4 @@
+import com.android.build.api.variant.BuildConfigField
 import dependencies.Dependencies
 import dependencies.DependencyGroups
 import extensions.androidTestImplementation
@@ -38,6 +39,11 @@ android {
             }
         }
 
+
+    }
+    buildFeatures {
+        buildConfig = true
+        compose = true
     }
 
     buildTypes {
@@ -49,6 +55,7 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -56,10 +63,7 @@ android {
     kotlinOptions {
         jvmTarget = AppConfigConstants.JVM_TARGET
     }
-    buildFeatures {
-        buildConfig = true
-        compose = true
-    }
+
     composeOptions {
         kotlinCompilerExtensionVersion = AppConfigConstants.kotlinCompilerExtensionVersion
     }
@@ -101,5 +105,30 @@ dependencies {
     implementation(Dependencies.firebaseAuthKtx)
     implementation(Dependencies.firebaseDatabase)
     implementation (Dependencies.material)
+    implementation(Dependencies.swipeRefresh)
+}
 
+androidComponents{
+    onVariants {
+        it.buildConfigFields.put(
+            "API_KEY", BuildConfigField(
+                "String",
+                getApiKey(),
+                "api-key"
+            )
+        )
+    }
+}
+fun getApiKey(): String {
+    val items = HashMap<String, String>()
+
+    val fl = rootProject.file("app/keys.properties")
+
+    (fl.exists())?.let {
+        fl.forEachLine {
+            items[it.split("=")[0]] = it.split("=")[1]
+        }
+    }
+
+    return items["API_KEY"]!!
 }
