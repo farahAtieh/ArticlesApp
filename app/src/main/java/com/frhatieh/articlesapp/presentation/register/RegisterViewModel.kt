@@ -76,8 +76,13 @@ class RegisterViewModel @Inject constructor(
         if (verifyInput()) {
             when (val loginResponse = registerUseCase(
                 _uiState.value.email,
-                _uiState.value.password
-            )) {
+                _uiState.value.password,
+                _uiState.value.nationalId ?: "",
+                _uiState.value.phoneNumber ?: "",
+                _uiState.value.fullName,
+                _uiState.value.dateOfBirth ?: "",
+                )) {
+
                 is Response.Failure -> {
                     _uiState.update {
                         it.copy(

@@ -48,29 +48,29 @@ fun DashboardScreen(
     val state = viewModel.uiState.collectAsState().value
     val isRefreshing by viewModel.isRefreshing.collectAsState()
 
-        SwipeRefresh(
-            state = rememberSwipeRefreshState(isRefreshing = isRefreshing),
-            onRefresh = viewModel::refresh,
-        ) {
-            when (state) {
-                is ArticlesUiState.Error -> {
-                    Text(text = stringResource(id = state.errorMessageId))
-                }
-
-                ArticlesUiState.Loading -> {
-                    LoadingScreen()
-                }
-
-                is ArticlesUiState.Success -> {
-                    Dashboard(
-                        state.articles,
-                        viewModel::search,
-                        viewModel::sort
-                    )
-                }
-
+    SwipeRefresh(
+        state = rememberSwipeRefreshState(isRefreshing = isRefreshing),
+        onRefresh = viewModel::refresh,
+    ) {
+        when (state) {
+            is ArticlesUiState.Error -> {
+                Text(text = stringResource(id = state.errorMessageId))
             }
+
+            ArticlesUiState.Loading -> {
+                LoadingScreen()
+            }
+
+            is ArticlesUiState.Success -> {
+                Dashboard(
+                    state.articles,
+                    viewModel::search,
+                    viewModel::sort
+                )
+            }
+
         }
+    }
 }
 
 @Composable
@@ -82,41 +82,41 @@ fun Dashboard(
     var isSorted by remember { mutableStateOf(false) }
     var searchQuery by remember { mutableStateOf("") }
 
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            verticalArrangement = Arrangement.spacedBy(12.dp)
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp)
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween
-            ) {
-                Text(text = stringResource(id = R.string.articles))
-                Row {
-                    Icon(
-                        modifier = Modifier.size(24.dp),
-                        painter = painterResource(id = R.drawable.ic_sort),
-                        contentDescription = null
-                    )
-                    Text(text = stringResource(id = R.string.sort),
-                        fontWeight = if (isSorted) FontWeight.Bold else FontWeight.Normal,
-                        textDecoration = if (isSorted) TextDecoration.Underline else null,
-                        modifier = Modifier
-                            .padding(2.dp)
-                            .clickable {
-                                isSorted = !isSorted
-                                sortArticles(isSorted)
-                            })
-                }
+            Text(text = stringResource(id = R.string.articles))
+            Row {
+                Icon(
+                    modifier = Modifier.size(24.dp),
+                    painter = painterResource(id = R.drawable.ic_sort),
+                    contentDescription = null
+                )
+                Text(text = stringResource(id = R.string.sort),
+                    fontWeight = if (isSorted) FontWeight.Bold else FontWeight.Normal,
+                    textDecoration = if (isSorted) TextDecoration.Underline else null,
+                    modifier = Modifier
+                        .padding(2.dp)
+                        .clickable {
+                            isSorted = !isSorted
+                            sortArticles(isSorted)
+                        })
             }
+        }
 
-            SearchTextField(searchQuery) {
-                searchQuery = it
-                searchForArticles(searchQuery)
-            }
+        SearchTextField(searchQuery) {
+            searchQuery = it
+            searchForArticles(searchQuery)
+        }
 
-            ArticlesDashboard(articles)
+        ArticlesDashboard(articles)
 
     }
 }

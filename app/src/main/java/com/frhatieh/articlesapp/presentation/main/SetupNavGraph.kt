@@ -14,7 +14,7 @@ import com.frhatieh.articlesapp.presentation.register.RegisterScreen
 fun SetupNavGraph(navController: NavHostController) {
     NavHost(
         navController = navController,
-        startDestination = ScreenRoutes.Home.route
+        startDestination = ScreenRoutes.Splash.route
     ) {
         composable(route = ScreenRoutes.Splash.route) {
             SplashScreen(navController)

@@ -22,4 +22,8 @@
     <string name="and_seperater"> and </string>
     <string name="dashboard">Dashboard</string>
     <string name="more">More</string>
+    <string name="details">Details</string>
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+    <string name="please_try_again_later">Please try again later</string>
 </resources>
