@@ -11,4 +11,16 @@
     <string name="password">الرقم السري</string>
     <string name="articles">مقالات</string>
     <string name="sort">ترتيب</string>
+    <string name="network_error">رجاءً تأكد من شبكتك!</string>
+    <string name="error_fetching_new_articles">هنالك خطأ في تحميل المفالات</string>
+    <string name="search">بحث</string>
+    <string name="week"> أسبوع </string>
+    <string name="weeks"> أسابيع </string>
+    <string name="day"> يوم </string>
+    <string name="days"> أيام </string>
+    <string name="today">اليوم</string>
+    <string name="ago"> مضى </string>
+    <string name="and_seperater"> و </string>
+    <string name="dashboard">اللائحة</string>
+    <string name="more">المزيد</string>
 </resources>
