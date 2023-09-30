@@ -8,4 +8,6 @@ interface ArticlesRepository {
     fun getPopularViewedArticles(): Flow<List<Article>>
 
     fun fetchPopularViewedArticles(): Flow<Result<List<Article>>>
+
+    suspend fun clearAllArticles()
 }

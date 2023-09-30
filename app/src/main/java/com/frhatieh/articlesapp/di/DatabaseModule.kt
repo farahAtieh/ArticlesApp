@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.frhatieh.articlesapp.data.database.ArticlesDatabase
 import com.frhatieh.articlesapp.data.database.dao.ArticlesDao
+import com.frhatieh.articlesapp.data.database.dao.UserDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -27,4 +28,8 @@ class DatabaseModule {
     @Provides
     fun provideArticlesDao(articlesDatabase: ArticlesDatabase): ArticlesDao =
         articlesDatabase.articlesDao()
+
+    @Provides
+    fun provideUserDao(articlesDatabase: ArticlesDatabase): UserDao =
+        articlesDatabase.userDao()
 }

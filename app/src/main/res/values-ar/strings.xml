@@ -23,4 +23,9 @@
     <string name="and_seperater"> و </string>
     <string name="dashboard">اللائحة</string>
     <string name="more">المزيد</string>
+    <string name="details">تفاصيل</string>
+    <string name="logout">خروج</string>
+    <string name="settings">اعدادات</string>
+    <string name="please_try_again_later">يرجى المحاولة لاحقًا</string>
+
 </resources>

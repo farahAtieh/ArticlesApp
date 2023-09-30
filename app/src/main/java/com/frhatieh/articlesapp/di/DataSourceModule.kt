@@ -1,8 +1,10 @@
 package com.frhatieh.articlesapp.di
 
 import com.frhatieh.articlesapp.data.database.dao.ArticlesDao
+import com.frhatieh.articlesapp.data.database.dao.UserDao
 import com.frhatieh.articlesapp.data.datasource.LocalDataSource
 import com.frhatieh.articlesapp.data.datasource.RemoteDataSource
+import com.frhatieh.articlesapp.data.datasource.UserLocalDataSource
 import com.frhatieh.articlesapp.data.network.ArticlesEndPoint
 import dagger.Module
 import dagger.Provides
@@ -20,4 +22,8 @@ class DataSourceModule {
     @Provides
     fun provideLocalDataSource(articlesDao: ArticlesDao): LocalDataSource =
         LocalDataSource(articlesDao)
+
+    @Provides
+    fun provideUserDataSource(userDao: UserDao): UserLocalDataSource =
+        UserLocalDataSource((userDao))
 }

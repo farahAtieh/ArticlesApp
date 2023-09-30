@@ -1,5 +1,7 @@
 package com.frhatieh.articlesapp.data.model
 
+import com.frhatieh.articlesapp.domain.model.User
+
 fun ArticleEntity.toArticle() =
     Article(
         id = id,
@@ -28,4 +30,13 @@ fun ArticleResponse.toArticle() =
         url = url,
         publishedDate = publishedDate,
         imageUrl = getImageUrl()
+    )
+
+fun UserEntity.toUser() =
+    User(
+        email = email,
+        fullName = fullName,
+        nationalId = nationalId,
+        dateOfBirth = dateOfBirth,
+        phoneNumber = phoneNumber
     )

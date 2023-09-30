@@ -9,6 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.withContext
 
 class ArticlesRepositoryImpl(
     private val localDataSource: LocalDataSource,
@@ -38,4 +39,10 @@ class ArticlesRepositoryImpl(
             }
 
         }.flowOn(Dispatchers.IO)
+
+    override suspend fun clearAllArticles() {
+        withContext(Dispatchers.IO){
+            localDataSource.clearAll()
+        }
+    }
 }
